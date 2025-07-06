@@ -15,7 +15,7 @@ def get_tavily_search_tool():
         )
     return TavilySearchResults(max_results=5, tavily_api_key=TAVILY_API_KEY)
 
-# New Math Tools
+# Math Tools
 @tool
 def add(a: float, b: float) -> float:
     """Adds two numbers, a and b. Returns their sum.

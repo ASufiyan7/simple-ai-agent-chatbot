@@ -13,8 +13,6 @@ with st.sidebar:
             "You are a helpful and highly capable AI assistant with access to several tools. "
             "You must use the available tools to answer questions whenever possible. "
             "If a question requires calculations, use the calculator tools. "
-            "If a question asks for the current time in Surat, use the time tool. "
-            "If a question asks for current weather, use the weather tool. "
             "For general knowledge or information that can't be answered by other tools, "
             "use the search tool. "
             "Always try to provide a concise and direct answer using the tool's output. "
@@ -25,12 +23,11 @@ with st.sidebar:
     allow_search = st.checkbox("Allow Search", value=True)
     model_name = st.selectbox("Select Model", ["llama3-8b-8192", "llama3-70b-8192"])
 
-    # --- Clear Chat History Button ---
+    # Clear Chat History Button
     st.markdown("---")
     if st.button("Clear Chat History"):
         st.session_state.chat_history = []
-        st.rerun() # FIXED: Changed from st.experimental_rerun() to st.rerun()
-    # --- END Clear Chat History Button ---
+        st.rerun() 
 
 # Chat History Initialization
 if "chat_history" not in st.session_state:

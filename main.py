@@ -1,11 +1,9 @@
 # D:\Python\Multiverse\main.py
 
-# IMPORTANT: Import your config module from Backend FIRST to ensure environment variables are loaded
 from Backend import config 
 
 from fastapi import FastAPI
 from Backend.route import router
-# import uvicorn # Only needed if you run from this file directly
 
 app = FastAPI(title="AI Agent Backend")
 app.include_router(router, prefix="/api")
