@@ -3,3 +3,8 @@ langchain
 langchain-community
 langchain-groq
 python_dotenv
+langgraph
+fastapi
+uvicorn
+requests
+tavily-python

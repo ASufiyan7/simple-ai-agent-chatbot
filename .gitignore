@@ -1,0 +1,12 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.Python
+env/
+venv/
+lib/
+# Specific to your project
+.env.local
+.venv/
